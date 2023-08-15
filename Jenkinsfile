@@ -44,7 +44,9 @@ pipeline {
     post {
         always {
             // Deactivate the virtual environment
-            sh '. venv/bin/deactivate'
+            //sh '. venv/bin/deactivate'
+             sh 'echo " Build completed successfuly"'
+
         }
     }
 }
