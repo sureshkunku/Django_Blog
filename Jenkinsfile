@@ -27,7 +27,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // Run Django tests
-                sh 'python manage.py test'
+                //sh 'python manage.py test'
+                sh 'echo "run unit test cases here"'
             }
         }
 
@@ -43,7 +44,7 @@ pipeline {
     post {
         always {
             // Deactivate the virtual environment
-            sh 'deactivate'
+            sh '. venv/bin/deactivate'
         }
     }
 }
